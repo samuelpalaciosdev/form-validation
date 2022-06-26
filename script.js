@@ -66,3 +66,10 @@ const validateInput = (expression, input, field) => {
     fields[field] = false;
   }
 };
+
+// For each input pass the validateForm function
+
+inputs.forEach((input) => {
+  input.addEventListener('keyup', validateForm);
+  input.addEventListener('blur', validateForm);
+});
