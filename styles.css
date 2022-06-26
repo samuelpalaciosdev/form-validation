@@ -1,0 +1,99 @@
+:root {
+  --light-red: #fad9dc;
+  --error: #985a67;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  box-sizing: inherit;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+.form-check-label {
+  margin-top: 0;
+}
+
+input,
+textarea {
+  margin-top: 0.5rem;
+}
+
+h1 {
+  color: green;
+}
+
+.card {
+  margin-top: 5rem;
+}
+
+.error-checker {
+  padding: 0 0.925rem;
+}
+
+.card-checkerror {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--error);
+  background-color: var(--light-red);
+}
+
+.card-form:nth-child(4) {
+  margin-right: 1rem;
+}
+
+.form-check-label i {
+  color: white;
+}
+
+.cards__section {
+  max-width: 40%;
+}
+
+.radio__btns {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+.cta__btns {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 400px) {
+  .cards__section {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .cards__section {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards__section {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cards__section {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .cards__section {
+    max-width: 40%;
+  }
+}
