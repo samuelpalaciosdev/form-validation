@@ -23,6 +23,33 @@ const fields = {
   postalCode: false,
 };
 
+const validateForm = (e) => {
+  switch (e.target.name) {
+    case 'cardnumber':
+      validateInput(expressions.card, e.target, 'card');
+      break;
+    case 'cvc':
+      validateInput(expressions.cvc, e.target, 'cvc');
+      break;
+
+    case 'amount':
+      validateInput(expressions.amount, e.target, 'amount');
+      break;
+    case 'firstName':
+      validateInput(expressions.name, e.target, 'firstName');
+      break;
+    case 'lastName':
+      validateInput(expressions.name, e.target, 'lastName');
+      break;
+    case 'city':
+      validateInput(expressions.city, e.target, 'city');
+      break;
+    case 'postalcode':
+      validateInput(expressions.postalCode, e.target, 'postalCode');
+      break;
+  }
+};
+
 const validateInput = (expression, input, field) => {
   // If input it's like the regex, remove alert and red background
   if (expression.test(input.value)) {
