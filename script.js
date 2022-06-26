@@ -22,3 +22,20 @@ const fields = {
   city: false,
   postalCode: false,
 };
+
+const validateInput = (expression, input, field) => {
+  // If input it's like the regex, remove alert and red background
+  if (expression.test(input.value)) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    input.nextElementSibling.style.display = 'none';
+    input.classList.remove('bg-danger', 'bg-opacity-25');
+    fields[field] = true;
+  } else {
+    // // If input it's not like the regex, add alert and red background
+    input.classList.add('bg-danger', 'bg-opacity-25');
+    input.classList.add('is-invalid');
+    input.nextElementSibling.style.display = 'inline';
+    fields[field] = false;
+  }
+};
