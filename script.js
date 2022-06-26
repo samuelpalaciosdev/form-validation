@@ -9,7 +9,7 @@ const expressions = {
   card: /^\d{13,16}$/,
   cvc: /^\d{4}$/,
   amount: /\d+/,
-  city: /[a-zA-Z]+/,
+  city: /^[a-zA-Z]+$/,
   postalCode: /^\d{4,8}$/,
 };
 
