@@ -73,3 +73,30 @@ inputs.forEach((input) => {
   input.addEventListener('keyup', validateForm);
   input.addEventListener('blur', validateForm);
 });
+
+// Form submit event listener
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (fields.firstName && fields.lastName && fields.card && fields.cvc && fields.amount && fields.city && fields.postalCode) {
+    form.reset();
+
+    alertMsg.innerHTML = 'Form succesfuly sent!';
+    alertMsg.classList.remove('alert-danger');
+    alertMsg.classList.add('alert-success');
+    alertMsg.classList.remove('d-none');
+
+    setTimeout(() => {
+      alertMsg.classList.add('d-none');
+      inputs.forEach((input) => {
+        input.classList.remove('is-valid');
+      });
+    }, 3000);
+  } else {
+    alertMsg.innerHTML = 'Some fields are missing';
+    alertMsg.classList.remove('alert-success');
+    alertMsg.classList.add('alert-danger');
+    alertMsg.classList.remove('d-none');
+  }
+});
