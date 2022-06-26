@@ -12,3 +12,13 @@ const expressions = {
   city: /[a-zA-Z]+/,
   postalCode: /^\d{4,8}$/,
 };
+
+const fields = {
+  firstName: false,
+  lastName: false,
+  card: false,
+  cvc: false,
+  amount: false,
+  city: false,
+  postalCode: false,
+};
